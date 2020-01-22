@@ -17,7 +17,32 @@ NOTE:  Windows users should use Git Bash for their command line work
   1. Choose San Francisco for the location of the Data Center
   1. You do not need to select any particular App.
   1. Be sure to **add your SSH key** by clicking the "Add SSH Key" link (or selecting your previously added SSH Key) near the bottom of the Droplet creation form.
+
+  
 4. Connect to your Droplet via SSH from local machine terminal using `ssh root@<ip address>`. ([Consult this guide for more detailed help with SSH Keys and access.](https://www.digitalocean.com/community/tutorials/how-to-use-ssh-keys-with-digitalocean-droplets))
+
+
+  -- (Note to self: if you get on GitBash 
+  ssh root@Ip addreess 
+  permission denied (publicKey)
+  
+  you need to 
+  1. log into your diginal ocean > Droplet > Access > Launch Console 
+  - if you did not set up unix pass ( reset root password ) > get pass by email
+  -- Launch Console again and username: root pass is from Email, when Prompt for current pass enter Emailed pass again and set new pass
+  2. now that you have access should say root@unbuto....ect
+  2a. type in sudo nano /etc/ssh/sshd_config 
+  - litterally hit the down button on your keypad to scroll down and search for and Change 
+  -PermitRootLogin prohibit-password to PermitRootLogin yes 
+  -PasswordAuthentication no to PasswordAuthentication yes
+  
+  3. then hold Ctrl+x to exit Ctrl+z is undo
+  
+  4. then type sudo reboot OR sudo service ssh restart
+  
+  4a. then try again with ssh root@ipaddress on your git bash 
+
+
 
 Once you have created your Droplet and successfully connected to it, you will need to install and configure Git:
 
