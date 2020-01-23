@@ -73,15 +73,33 @@ Now that you have this repository on your Droplet, we will perform some file man
 4. Use the `cp` command to copy `index.html` to `tmp/keepme.html`.
 5. Use the `rm` command to remove (or "delete") the file `deleteme.html`.
 6. Use the `rmdir` command to remove (or "delete") the directory `delete_this_directory/`. Does it work? Figure out how to remove `delete_this_directory/` and all the contents within.
+-command has changed a little so use:
+-rm -r mydir
+-note the -r for recursive 
+
 7. Use the `scp` (SSH secure copy) command to upload an image to the `img/` directory. (`scp <your_filename.jpg> root@<YOUR DROPLET IP ADDRESS>:~/wats1030-moving-files/challenge_files/img/`)
   * Make your life a little easier by uploading a file that isn't too huge in filesize.
   * You may upload any file you choose; please keep it appropriate for the classroom/workplace.
   * You may use an application such as WinSCP or Cyberduck if you choose.
+  
+  -note the resource video used a new tab in the terminal so you need to install the command first 
+ -ctrl + shift + T
+ but if that doesnt work 
+ -toward the top like say the git bash logo ( the header area )
+ right click > new
+ should open a new terminal 
+ 
+ ---then cd to directory of your image and type its name in the command line like so 
+ scp images.jpg root@64.225.114.251:~/wats1030-moving-files/challenge_files/img/
+  
 8. Use the `mv` (move) command to sort the `challenge_files/logs/` directory.
   * Use `mkdir` to create new directories to store the files.
   * Organize the new directories into year and month.
   * Use `mv` to move the log files into their appropriate directory.
   * Hint: Use wildcards to move several files at a time so the work goes much more quickly.
+  -I created folders mkdri 2015-jan > dec because if i did 2015-01 folder its redundant 
+  **mv 2015-02-* 2015-feb
+  
 
 Once you have completed this work, you should `commit` your changes and `push` them back up to Github. To do that, use the command-line Git application:
 
