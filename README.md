@@ -112,6 +112,9 @@ Once you have completed this work, you should `commit` your changes and `push` t
 7. After you have made your commit, you should push your changes to Github, which is the `origin` for your repository: `git push origin`
 8. Review the response and make sure your `push` was successful.
 
+9. sometimes you have to use git pull 
+  so that the files can push
+
 Congratulations! You have now committed and pushed your changes to Github, all from the command line. This whole process may have seemed difficult or arduous at first, but with practice it becomes much faster to manage these files and commits via the command-line rather than most graphical tools.
 
 ## Stretch Requirements
